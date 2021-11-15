@@ -26,7 +26,13 @@
 
 ##### Maven Dependency
 
-待发布.
+```xml
+<dependency>
+  <groupId>com.github.charlemaznable</groupId>
+  <artifactId>embedded-mysql-extension</artifactId>
+  <version>0.0.3</version>
+</dependency>
+```
 
 ##### Maven Dependency SNAPSHOT
 
@@ -34,6 +40,6 @@
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>embedded-mysql-extension</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.4-SNAPSHOT</version>
 </dependency>
 ```
