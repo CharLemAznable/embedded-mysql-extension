@@ -24,16 +24,24 @@ public final class EmbeddedMysqlExtension implements Extension {
         for (val configLoader : configLoaders) {
             val configMap = Mapp.newHashMap(configLoader.loadEmbeddedMysqlConfigs());
             for (val entry : configMap.entrySet()) {
-                val config = entry.getValue();
-                val mysqldConfig = mysqldConfig(config);
-                val embeddedMysql = embeddedMysql(config, mysqldConfig);
-                embeddedMysqlMap.put(entry.getKey(), embeddedMysql);
+                embeddedMysqlMap.put(entry.getKey(), embeddedMysql(entry.getValue()));
             }
         }
     }
 
     public static EmbeddedMysql getMysql(String name) {
         return embeddedMysqlMap.get(name);
+    }
+
+    private static EmbeddedMysql embeddedMysql(EmbeddedMysqlConfig config) {
+        val mysqldConfig = mysqldConfig(config);
+        val embeddedMysql = anEmbeddedMysql(mysqldConfig);
+        val schemas = Listt.newArrayList(config.schemas());
+        for (val schema : schemas) {
+            embeddedMysql.addSchema(schema.getKey(),
+                    Listt.newArrayList(schema.getValue()));
+        }
+        return embeddedMysql.start();
     }
 
     private static MysqldConfig mysqldConfig(EmbeddedMysqlConfig config) {
@@ -47,16 +55,6 @@ public final class EmbeddedMysqlExtension implements Extension {
             mysqldConfig.withServerVariable(variable.getKey(), variable.getValue());
         }
         return mysqldConfig.build();
-    }
-
-    private static EmbeddedMysql embeddedMysql(EmbeddedMysqlConfig config, MysqldConfig mysqldConfig) {
-        val embeddedMysql = anEmbeddedMysql(mysqldConfig);
-        val schemas = Listt.newArrayList(config.schemas());
-        for (val schema : schemas) {
-            embeddedMysql.addSchema(schema.getKey(),
-                    Listt.newArrayList(schema.getValue()));
-        }
-        return embeddedMysql.start();
     }
 
     private EmbeddedMysqlExtension() {}

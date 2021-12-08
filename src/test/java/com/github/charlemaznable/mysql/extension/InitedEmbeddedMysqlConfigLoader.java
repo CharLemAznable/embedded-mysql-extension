@@ -17,23 +17,21 @@ public class InitedEmbeddedMysqlConfigLoader implements EmbeddedMysqlConfigLoade
 
     public static final String INITED_NAME = "inited";
 
-    public static class InitedEmbeddedMysqlConfig implements EmbeddedMysqlConfig {
-
-        @Override
-        public int port() {
-            return 3311;
-        }
-
-        @Override
-        public List<Pair<String, List<SqlScriptSource>>> schemas() {
-            return Listt.newArrayList(Pair.of(INITED_NAME, Listt.newArrayList(
-                    Sources.fromURL(classResource("sql/inited.sql"))
-            )));
-        }
-    }
-
     @Override
     public Map<String, EmbeddedMysqlConfig> loadEmbeddedMysqlConfigs() {
-        return Mapp.of(INITED_NAME, new InitedEmbeddedMysqlConfig());
+        return Mapp.of(INITED_NAME, new EmbeddedMysqlConfig() {
+
+            @Override
+            public int port() {
+                return 3311;
+            }
+
+            @Override
+            public List<Pair<String, List<SqlScriptSource>>> schemas() {
+                return Listt.newArrayList(Pair.of(INITED_NAME, Listt.newArrayList(
+                        Sources.fromURL(classResource("sql/inited.sql"))
+                )));
+            }
+        });
     }
 }
