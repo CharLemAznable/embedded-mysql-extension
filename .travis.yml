@@ -10,5 +10,6 @@ cache:
   directories:
     - '$HOME/.sonar/cache'
     - '$HOME/.embedmysql'
+    - '$HOME/.m2'
 after_success:
   - bash <(curl -s https://codecov.io/bash)
