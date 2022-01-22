@@ -30,7 +30,7 @@
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>embedded-mysql-extension</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
 </dependency>
 ```
 
@@ -40,6 +40,6 @@
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>embedded-mysql-extension</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.0.6-SNAPSHOT</version>
 </dependency>
 ```
