@@ -24,16 +24,38 @@
         <url>https://github.com/CharLemAznable/embedded-mysql-extension</url>
     </scm>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <properties>
-        <complex-kits.version>0.12.6-SNAPSHOT</complex-kits.version>
+        <sonar.projectKey>CharLemAznable_embedded-mysql-extension</sonar.projectKey>
+
+        <char-elves.version>0.0.6-SNAPSHOT</char-elves.version>
         <logback-miner.version>0.1.6-SNAPSHOT</logback-miner.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.github.charlemaznable</groupId>
-            <artifactId>complex-kits</artifactId>
-            <version>${complex-kits.version}</version>
+            <artifactId>char-elves</artifactId>
+            <version>${char-elves.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

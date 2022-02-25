@@ -1,7 +1,6 @@
 ### embedded-mysql-extension
 
-[![Build Status](https://travis-ci.com/CharLemAznable/embedded-mysql-extension.svg?branch=main)](https://travis-ci.org/CharLemAznable/embedded-mysql-extension)
-[![codecov](https://codecov.io/gh/CharLemAznable/embedded-mysql-extension/branch/main/graph/badge.svg?token=oVtMQpdSPO)](https://codecov.io/gh/CharLemAznable/embedded-mysql-extension)
+[![Build](https://github.com/CharLemAznable/embedded-mysql-extension/actions/workflows/build.yml/badge.svg)](https://github.com/CharLemAznable/embedded-mysql-extension/actions/workflows/build.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/embedded-mysql-extension/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/embedded-mysql-extension/)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 ![GitHub code size](https://img.shields.io/github/languages/code-size/CharLemAznable/embedded-mysql-extension)
