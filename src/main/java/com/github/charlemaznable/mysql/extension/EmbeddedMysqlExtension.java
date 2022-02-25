@@ -5,6 +5,7 @@ import com.github.charlemaznable.core.lang.Mapp;
 import com.google.common.collect.Maps;
 import com.wix.mysql.EmbeddedMysql;
 import com.wix.mysql.config.MysqldConfig;
+import lombok.NoArgsConstructor;
 import lombok.val;
 import org.junit.jupiter.api.extension.Extension;
 
@@ -13,7 +14,9 @@ import java.util.ServiceLoader;
 
 import static com.wix.mysql.EmbeddedMysql.anEmbeddedMysql;
 import static com.wix.mysql.config.MysqldConfig.aMysqldConfig;
+import static lombok.AccessLevel.PRIVATE;
 
+@NoArgsConstructor(access = PRIVATE)
 public final class EmbeddedMysqlExtension implements Extension {
 
     public static final String DEFAULT_NAME = "embedded";
@@ -56,6 +59,4 @@ public final class EmbeddedMysqlExtension implements Extension {
         }
         return mysqldConfig.build();
     }
-
-    private EmbeddedMysqlExtension() {}
 }
