@@ -26,6 +26,12 @@ jobs:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
+      - name: Cache Embedded Mysql
+        uses: actions/cache@v1
+        with:
+          path: ~/.embedmysql
+          key: ${{ runner.os }}-embedmysql
+          restore-keys: ${{ runner.os }}-embedmysql
       - name: Build and analyze
         run: mvn -e -U verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
         env:
