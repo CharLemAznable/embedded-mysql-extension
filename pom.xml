@@ -48,6 +48,7 @@
         <sonar.projectKey>CharLemAznable_embedded-mysql-extension</sonar.projectKey>
 
         <char-elves.version>0.0.6-SNAPSHOT</char-elves.version>
+
         <logback-miner.version>0.1.6-SNAPSHOT</logback-miner.version>
     </properties>
 
@@ -58,25 +59,21 @@
             <version>${char-elves.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.wix</groupId>
+            <artifactId>wix-embedded-mysql</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.wix</groupId>
-            <artifactId>wix-embedded-mysql</artifactId>
-            <scope>compile</scope>
         </dependency>
 
         <dependency>
-            <groupId>com.github.charlemaznable</groupId>
-            <artifactId>logback-miner</artifactId>
-            <version>${logback-miner.version}</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -85,8 +82,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>logback-miner</artifactId>
+            <version>${logback-miner.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
