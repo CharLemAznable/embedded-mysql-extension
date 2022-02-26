@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.github.charlemaznable</groupId>
         <artifactId>char-dependencies</artifactId>
-        <version>0.0.6-SNAPSHOT</version>
+        <version>0.0.7-SNAPSHOT</version>
     </parent>
 
     <artifactId>embedded-mysql-extension</artifactId>
-    <version>0.0.6-SNAPSHOT</version>
+    <version>0.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Embedded Mysql Extension</name>
@@ -47,9 +47,9 @@
     <properties>
         <sonar.projectKey>CharLemAznable_embedded-mysql-extension</sonar.projectKey>
 
-        <char-elves.version>0.0.6-SNAPSHOT</char-elves.version>
+        <char-elves.version>0.0.7-SNAPSHOT</char-elves.version>
 
-        <logback-miner.version>0.1.6-SNAPSHOT</logback-miner.version>
+        <logback-miner.version>0.1.7-SNAPSHOT</logback-miner.version>
     </properties>
 
     <dependencies>
