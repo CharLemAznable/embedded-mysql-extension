@@ -49,7 +49,7 @@
 
         <char-elves.version>0.0.7-SNAPSHOT</char-elves.version>
 
-        <logback-miner.version>0.1.7-SNAPSHOT</logback-miner.version>
+        <logback-dendrobe.version>0.1.7-SNAPSHOT</logback-dendrobe.version>
     </properties>
 
     <dependencies>
@@ -78,13 +78,17 @@
         </dependency>
         <dependency>
             <groupId>com.github.bingoohuang</groupId>
+            <artifactId>diamond-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.bingoohuang</groupId>
             <artifactId>eql</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.github.charlemaznable</groupId>
-            <artifactId>logback-miner</artifactId>
-            <version>${logback-miner.version}</version>
+            <artifactId>logback-dendrobe</artifactId>
+            <version>${logback-dendrobe.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
